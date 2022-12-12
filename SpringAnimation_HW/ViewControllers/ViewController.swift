@@ -23,13 +23,13 @@ class ViewController: UIViewController {
     
     @IBAction func runButtonTapped(_ sender: SpringButton) {
         animationFunc()
-        sender.setTitle("Run \(nameOfAnimation[index].somePresetOfAnimation ?? .pop)", for: .normal)
+        sender.setTitle("Run \(nameOfAnimation[index].somePresetOfAnimation)", for: .normal)
         animationView.animate()
     }
     
     private func animationFunc() {
-        animationView.animation = nameOfAnimation[index].somePresetOfAnimation?.rawValue ?? ""
-        animationView.curve = nameOfAnimation[index].someCurve?.rawValue ?? ""
+        animationView.animation = nameOfAnimation[index].somePresetOfAnimation
+        animationView.curve = nameOfAnimation[index].someCurve
         animationView.force = nameOfAnimation[index].forceDoubleR
         animationView.duration = nameOfAnimation[index].durationDoubleR
         animationView.delay = nameOfAnimation[index].delayDoubleR

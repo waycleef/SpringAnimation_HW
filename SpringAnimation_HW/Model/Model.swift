@@ -6,19 +6,18 @@
 //
 
 import Foundation
-import SpringAnimation
 
 struct NameOfAnimaton {
-    let somePresetOfAnimation: AnimationPreset?
-    let someCurve: AnimationCurve?
+    let somePresetOfAnimation: String
+    let someCurve: String
     let forceDoubleR: Double
     let durationDoubleR: Double
     let delayDoubleR: Double
     
     var decsription: String {
         """
-        Preset: \(somePresetOfAnimation ?? .swing)
-        Curve: \(someCurve ?? .easeIn)
+        Preset: \(somePresetOfAnimation)
+        Curve: \(someCurve)
         force: \(forceDoubleR)
         duration: \(durationDoubleR)
         delay: \(delayDoubleR)
@@ -26,11 +25,14 @@ struct NameOfAnimaton {
     }
     
     static func getNameOfAnimation() -> [NameOfAnimaton] {
+        
+        
+        
         var animations: [NameOfAnimaton] = []
         
-        for _ in 0..<AnimationPreset.allCases.count {
-            animations.append(NameOfAnimaton(somePresetOfAnimation: AnimationPreset.allCases.randomElement(),
-                                             someCurve: AnimationCurve.allCases.randomElement(),
+        for _ in 0..<DataSource.shared.nameOfAnimation.count {
+            animations.append(NameOfAnimaton(somePresetOfAnimation: DataSource.shared.nameOfAnimation.randomElement()?.rawValue ?? "wobble",
+                                             someCurve: DataSource.shared.someCurve.randomElement()?.rawValue ?? "spring",
                                              forceDoubleR: round((Double.random(in: 1...5) * 100)) / 100,
                                              durationDoubleR: round((Double.random(in: 0.5...5) * 100)) / 100,
                                              delayDoubleR: round((Double.random(in: 0...5) * 100)) / 100))
