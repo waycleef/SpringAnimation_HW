@@ -24,19 +24,11 @@ struct NameOfAnimaton {
         """
     }
     
-    static func getNameOfAnimation() -> [NameOfAnimaton] {
-        
-        
-        
-        var animations: [NameOfAnimaton] = []
-        
-        for _ in 0..<DataSource.shared.nameOfAnimation.count {
-            animations.append(NameOfAnimaton(somePresetOfAnimation: DataSource.shared.nameOfAnimation.randomElement()?.rawValue ?? "wobble",
-                                             someCurve: DataSource.shared.someCurve.randomElement()?.rawValue ?? "spring",
-                                             forceDoubleR: round((Double.random(in: 1...5) * 100)) / 100,
-                                             durationDoubleR: round((Double.random(in: 0.5...5) * 100)) / 100,
-                                             delayDoubleR: round((Double.random(in: 0...5) * 100)) / 100))
-        }
-        return animations
+    static func getNameOfAnimation() -> NameOfAnimaton {
+        NameOfAnimaton(somePresetOfAnimation: DataSource.shared.nameOfAnimation.randomElement()?.rawValue ?? "wobble",
+                       someCurve: DataSource.shared.someCurve.randomElement()?.rawValue ?? "spring",
+                       forceDoubleR: round((Double.random(in: 1...5) * 100)) / 100,
+                       durationDoubleR: round((Double.random(in: 0.5...5) * 100)) / 100,
+                       delayDoubleR: round((Double.random(in: 0...5) * 100)) / 100)
     }
 }

@@ -11,35 +11,26 @@ import SpringAnimation
 class ViewController: UIViewController {
 
     @IBOutlet var animationView: SpringView!
-    @IBOutlet var animationLabel: UILabel!
+    @IBOutlet var animationLabel: UILabel! {
+        didSet {
+            animationLabel.text = nameOfAnimation.decsription
+        }
+    }
     
     private var nameOfAnimation = NameOfAnimaton.getNameOfAnimation()
-    private var index = 0
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        animationFunc()
-    }
     
     @IBAction func runButtonTapped(_ sender: SpringButton) {
-        animationFunc()
-        sender.setTitle("Run \(nameOfAnimation[index].somePresetOfAnimation)", for: .normal)
+        animationLabel.text = nameOfAnimation.decsription
+        
+        animationView.animation = nameOfAnimation.somePresetOfAnimation
+        animationView.curve = nameOfAnimation.someCurve
+        animationView.force = nameOfAnimation.forceDoubleR
+        animationView.duration = nameOfAnimation.durationDoubleR
+        animationView.delay = nameOfAnimation.delayDoubleR
         animationView.animate()
-    }
-    
-    private func animationFunc() {
-        animationView.animation = nameOfAnimation[index].somePresetOfAnimation
-        animationView.curve = nameOfAnimation[index].someCurve
-        animationView.force = nameOfAnimation[index].forceDoubleR
-        animationView.duration = nameOfAnimation[index].durationDoubleR
-        animationView.delay = nameOfAnimation[index].delayDoubleR
-        animationLabel.text = nameOfAnimation[index].decsription
         
-        index += 1
-        
-        if index == nameOfAnimation.count - 1 {
-            index = 0
-        }
+        nameOfAnimation = NameOfAnimaton.getNameOfAnimation()
+        sender.setTitle("Run \(nameOfAnimation.somePresetOfAnimation)", for: .normal)
     }
     
 }
