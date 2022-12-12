@@ -14,6 +14,7 @@
 		5F01531C2943412000E9531A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F01531B2943412000E9531A /* Assets.xcassets */; };
 		5F01531F2943412000E9531A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F01531D2943412000E9531A /* LaunchScreen.storyboard */; };
 		5F015328294349F400E9531A /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 5F015327294349F400E9531A /* SpringAnimation */; };
+		5FE55C322946E3F600496519 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE55C312946E3F600496519 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		5F01531B2943412000E9531A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F01531E2943412000E9531A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F0153202943412000E9531A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FE55C312946E3F600496519 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,15 +60,56 @@
 		5F0153112943411F00E9531A /* SpringAnimation_HW */ = {
 			isa = PBXGroup;
 			children = (
-				5F0153122943411F00E9531A /* AppDelegate.swift */,
-				5F0153142943411F00E9531A /* SceneDelegate.swift */,
-				5F0153162943411F00E9531A /* ViewController.swift */,
-				5F0153182943411F00E9531A /* Main.storyboard */,
-				5F01531B2943412000E9531A /* Assets.xcassets */,
-				5F01531D2943412000E9531A /* LaunchScreen.storyboard */,
-				5F0153202943412000E9531A /* Info.plist */,
+				5FE55C302946E3E000496519 /* Model */,
+				5FE55C2C2946E38500496519 /* App */,
+				5FE55C2E2946E39E00496519 /* ViewControllers */,
+				5FE55C2F2946E3AB00496519 /* StoryBoards */,
+				5FE55C2D2946E39200496519 /* Resources */,
 			);
 			path = SpringAnimation_HW;
+			sourceTree = "<group>";
+		};
+		5FE55C2C2946E38500496519 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5F0153122943411F00E9531A /* AppDelegate.swift */,
+				5F0153142943411F00E9531A /* SceneDelegate.swift */,
+				5F0153202943412000E9531A /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5FE55C2D2946E39200496519 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5F01531B2943412000E9531A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5FE55C2E2946E39E00496519 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5F0153162943411F00E9531A /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5FE55C2F2946E3AB00496519 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				5F0153182943411F00E9531A /* Main.storyboard */,
+				5F01531D2943412000E9531A /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		5FE55C302946E3E000496519 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5FE55C312946E3F600496519 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +192,7 @@
 				5F0153172943411F00E9531A /* ViewController.swift in Sources */,
 				5F0153132943411F00E9531A /* AppDelegate.swift in Sources */,
 				5F0153152943411F00E9531A /* SceneDelegate.swift in Sources */,
+				5FE55C322946E3F600496519 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +341,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4RJ3J5RA5L;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SpringAnimation_HW/Info.plist;
+				INFOPLIST_FILE = SpringAnimation_HW/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,7 +372,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4RJ3J5RA5L;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SpringAnimation_HW/Info.plist;
+				INFOPLIST_FILE = SpringAnimation_HW/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
